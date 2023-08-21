@@ -24,5 +24,8 @@ public class Main {
         System.out.println(answer);
     }
 }
-
 ```
+
+| 메모리     | 시간    | 코드길이 |
+|:--------|:------|:-----|
+| 17580KB | 200ms | 619B  |

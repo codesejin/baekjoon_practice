@@ -17,28 +17,34 @@ public class Main {
         for (char c : a.toUpperCase().toCharArray()) {
             count[c - 'A']++;
         }
-        int alphabetIdx = 0;
+
         // 알파벳 배열에서 최대값 구하기
-        int max = count[0]; // -1로 해도 됨
-        // 알파벳 배열에서 중복되는 개수 구하기
-        int duplicateCount = 0;
+        int max = count[0];
         for (int i = 0; i < count.length; i++) {
             if (count[i] > max) {
                 max = count[i];
-                alphabetIdx = i;
-            // count배열의 인덱스 값과 최댓값으로 구한 값이 같을 경우 중복 개수 더하기
-            } else if (count[i] == max) {
-                duplicateCount ++;
             }
         }
         char ans;
-        if (duplicateCount > 0)
+        int idx = 0;
+        // count배열의 인덱스 값과 최댓값으로 구한 값이 같을 경우 중복개수 더하기
+        int duplicateCount = 0;
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] == max) {
+                duplicateCount ++ ;
+                idx =i;
+            }
+        }
+        if (duplicateCount > 1)
             ans = '?';
         else
-            ans = (char)('A' + alphabetIdx);
+            ans = (char)('A' + idx);
 
         System.out.println(ans);
     }
 }
-
 ```
+
+| 메모리     | 시간    | 코드길이 |
+|:--------|:------|:-----|
+| 30736KB | 472ms | 1109B    |
