@@ -1,6 +1,8 @@
 
-[문제 링크](https://www.acmicpc.net/problem/1919)
-[문제 풀이 링크](https://strong-park.tistory.com/7)
+| 백준 링크                                         | 티스토리 링크                                      |
+|:----------------------------------------------|:---------------------------------------------|
+| [문제 링크](https://www.acmicpc.net/problem/1919) | [문제 풀이 링크](https://strong-park.tistory.com/7) |
+
 
 ```java
 import java.util.Scanner;
