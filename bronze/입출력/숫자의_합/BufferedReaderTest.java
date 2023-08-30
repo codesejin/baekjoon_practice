@@ -1,4 +1,4 @@
-package bronze.숫자의_합;
+package bronze.입출력.숫자의_합;
 
 import java.io.BufferedReader;
 import java.io.IOException;

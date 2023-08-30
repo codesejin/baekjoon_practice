@@ -1,4 +1,4 @@
-package bronze.그대로_출력하기;
+package bronze.입출력.그대로_출력하기;
 
 import java.io.*;
 
@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         StringBuilder sb = new StringBuilder();
         while(true) {
             String str = br.readLine();
