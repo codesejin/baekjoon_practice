@@ -14,7 +14,6 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int totalDoc = Integer.parseInt(st.nextToken());
             int target = Integer.parseInt(st.nextToken());
-
             List<Integer> priorities = new ArrayList<>();
             st = new StringTokenizer(br.readLine(), " ");
             for (int j = 0; j < totalDoc; j++) {
@@ -63,7 +62,7 @@ public class Main {
                     break;
                 }
             } else {
-                queue.add(front);
+                queue.offer(front);
             }
         }
 
