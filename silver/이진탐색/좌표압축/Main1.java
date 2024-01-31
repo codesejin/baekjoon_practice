@@ -12,33 +12,33 @@ public class Main1 {
         int N = Integer.parseInt(br.readLine());
         StringTokenizer Xs = new StringTokenizer(br.readLine(), " ");
 
-        int[] coordinates = new int[N];
+        int[] XArray = new int[N];
         for (int i = 0; i < N; i++) {
-            coordinates[i] = Integer.parseInt(Xs.nextToken());
+            XArray[i] = Integer.parseInt(Xs.nextToken());
         }
 
         // 중복 제거 후 정렬한 좌표 배열
-        int[] uniqueSortedCoordinates = Arrays.stream(coordinates).distinct().sorted().toArray();
+        int[] copyArray = Arrays.stream(XArray).distinct().sorted().toArray();
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < N; i++) {
-            int compressedCoordinate = binarySearch(uniqueSortedCoordinates, coordinates[i]);
+            int compressedCoordinate = binarySearch(copyArray, XArray[i]);
             sb.append(compressedCoordinate).append(" ");
         }
 
         System.out.println(sb.toString().trim());
     }
 
-    private static int binarySearch(int[] arr, int target) {
+    private static int binarySearch(int[] copyArray, int target) {
         int left = 0;
-        int right = arr.length - 1;
+        int right = copyArray.length - 1;
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
-            if (arr[mid] == target) {
+            if (copyArray[mid] == target) {
                 return mid;
-            } else if (arr[mid] < target) {
+            } else if (copyArray[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
