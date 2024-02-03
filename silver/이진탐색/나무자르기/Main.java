@@ -28,7 +28,7 @@ public class Main {
         int result = 0;
 
         while (left <= right) {
-            int mid = (left + right) / 2;
+            int mid = (left + right) / 2; // int mid = left + (right - left) / 2 랑 동일함
             long sum = 0;
 
             for (int tree : treeArray) {
