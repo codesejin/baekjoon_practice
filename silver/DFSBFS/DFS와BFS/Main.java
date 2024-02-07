@@ -1,4 +1,4 @@
-package silver.DFSBFS;
+package silver.DFSBFS.DFS와BFS;
 
 import java.io.*;
 import java.util.Arrays;
