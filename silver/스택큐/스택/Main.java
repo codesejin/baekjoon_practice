@@ -1,4 +1,4 @@
-package silver.스택;
+package silver.스택큐.스택;
 
 import java.io.BufferedReader;
 import java.io.IOException;

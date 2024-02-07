@@ -1,4 +1,4 @@
-package silver.괄호;
+package silver.스택큐.괄호;
 
 import java.io.BufferedReader;
 import java.io.IOException;

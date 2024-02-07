@@ -1,4 +1,4 @@
-package silver.프린터_큐;
+package silver.스택큐.프린터_큐;
 
 import java.io.BufferedReader;
 import java.io.IOException;

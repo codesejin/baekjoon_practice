@@ -1,4 +1,4 @@
-package silver.문서_검색;
+package silver.스택큐.문서_검색;
 
 import java.util.Scanner;
 
