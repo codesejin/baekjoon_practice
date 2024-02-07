@@ -12,6 +12,7 @@ public class Main {
     static int count; // 모임 개수
     static int[] aparts = new int[25 * 25]; // 모임에 참여중인 단지 개수 합계
 
+    // 인전한 모임이 있는지 상하좌우 확인
     public static void dfs(int x, int y) {
         visited[x][y] = true;
         aparts[count]++;
@@ -28,21 +29,26 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 0. 입력 및 초기화
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         N = Integer.parseInt(br.readLine());
         graph = new boolean[N + 2][N + 2];
         visited = new boolean[N + 2][N + 2];
         // 1. graph에 연결 정보 채우기
-        for (int i = 1; i <= N; i++) {
+        for (int i = 0; i < N; i++) {
             String line = br.readLine();
-            for (int j = 1; j <= N; j++) {
-                if (line.charAt(j - 1) == '1') {
-                    graph[i][j] = true;
+            for (int j = 0; j < N; j++) {
+                if (line.charAt(j) - '0' == 1) {
+                    graph[i+1][j+1] = true;
                 }
             }
         }
-
+        // 그래프 잘 저장됬는지 확인용
+//        for (int i = 0; i < graph.length; i++) {
+//            for (int j = 0; j < graph[i].length ; j++) {
+//                System.out.print(graph[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
         // 2. 모든 단지 순회하면서 DFS (재귀함수) 호출
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
