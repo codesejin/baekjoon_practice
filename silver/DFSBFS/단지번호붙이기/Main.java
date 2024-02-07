@@ -9,8 +9,8 @@ public class Main {
     static int[] dx = {0, 0, -1, 1};
     static int[] dy = {-1, 1, 0, 0};
     static int N; // 지도 크기
-    static int count; // 모임에 참여중인 단지 개수
-    static int[] aparts = new int[25 * 25];
+    static int count; // 모임 개수
+    static int[] aparts = new int[25 * 25]; // 모임에 참여중인 단지 개수 합계
 
     public static void dfs(int x, int y) {
         visited[x][y] = true;
