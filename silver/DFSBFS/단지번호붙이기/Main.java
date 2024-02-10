@@ -12,7 +12,7 @@ public class Main {
     static int count; // 모임 개수
     static int[] aparts = new int[25 * 25]; // 모임에 참여중인 단지 개수 합계
 
-    // 인전한 모임이 있는지 상하좌우 확인
+    // 인접한 모임이 있는지 상하좌우 확인
     public static void dfs(int x, int y) {
         visited[x][y] = true;
         aparts[count]++;

@@ -27,21 +27,28 @@ public class Main {
             N = Integer.parseInt(st.nextToken()); // 열
             K = Integer.parseInt(st.nextToken());
 
-            graph = new boolean[M + 2][N + 2];
-            visited = new boolean[M + 2][N + 2];
+            graph = new boolean[N + 2][M + 2];
+            visited = new boolean[N + 2][M + 2];
 
             // 2. graph에 연결 정보 채우기
             for (int i = 0; i < K; i++) {
                 st = new StringTokenizer(br.readLine(), " ");
                 int x = Integer.parseInt(st.nextToken());
                 int y = Integer.parseInt(st.nextToken());
-                graph[x + 1][y + 1] = true;
+                graph[y + 1][x + 1] = true;
+            }
+
+            for (int i = 0; i < graph.length; i++) {
+                for (int j = 0; j < graph[i].length; j++) {
+                    System.out.print(graph[i][j] + "\t");
+                }
+                System.out.println();
             }
 
             // 3. dfs 수행
             int answer = 0;
-            for (int i = 1; i <= M; i++) {
-                for (int j = 1; j <= N; j++) {
+            for (int i = 1; i <= N; i++) {
+                for (int j = 1; j <= M; j++) {
                     if (graph[i][j] && !visited[i][j]) {
                         answer++;
                         dfs(i, j);

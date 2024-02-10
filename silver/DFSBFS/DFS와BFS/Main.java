@@ -30,7 +30,6 @@ public class Main {
 
         queue.offer(idx);
         visited[idx] = true;
-
         while (!queue.isEmpty()) {
             int current = queue.poll();
             sb.append(current).append(" ");
