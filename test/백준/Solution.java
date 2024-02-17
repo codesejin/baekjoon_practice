@@ -1,4 +1,4 @@
-package 백준;
+package test.백준;
 
 
 class Solution {
