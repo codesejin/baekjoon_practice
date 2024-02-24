@@ -1,4 +1,4 @@
-package gold.암호만들기;
+package gold.백트래킹.암호만들기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
