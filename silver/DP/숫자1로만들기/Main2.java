@@ -3,13 +3,12 @@ package silver.DP.숫자1로만들기;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-import java.util.ArrayList;
+
 public class Main2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number = Integer.parseInt(br.readLine());
-        // 테이블 정하기
+        // 테이블 정하기 (인덱스 넘버 활용하기 위해 +1)
         int dp[] = new int[number + 1];
         // 초기값 설정하기
         dp[0] = 0;
@@ -22,6 +21,5 @@ public class Main2 {
         }
         System.out.println(dp[number]);
         br.close();
-
     }
 }
