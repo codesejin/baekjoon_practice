@@ -17,9 +17,12 @@ public class Main {
         // 1. 누적 XOR 배열 만들기
         st = new StringTokenizer(br.readLine());
         int[] arr =new int[N+1];
+        String[] input = new String[N+1];
         for (int i = 1; i <= N; i++) {
             arr[i] = Integer.parseInt(st.nextToken()) ^ arr[i-1];
+            input[i] = Integer.toBinaryString(arr[i]);
         }
+        System.out.println(Arrays.toString(input));
         // 2. M번의 [s:e] 질문에 대해 누적 XOR 배열을 사용해 구간 XOR을 구한다.
         int answer = 0;
         while (M --> 0) {
