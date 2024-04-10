@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main_DFS {
     static int[][] graph;
     static boolean[][] visited;
     static int[][] distance; // 거리 정보를 저장할 배열
