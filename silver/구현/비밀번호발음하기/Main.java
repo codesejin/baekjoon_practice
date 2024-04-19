@@ -56,7 +56,7 @@ public class Main {
                 return false;
             }
             // 3단계 (자음 모음 기준이 아니라 "같은 글자"여야 함 -> 같은 글자가 2연속으로 오면 안되지만, ee와 oo는 예외)
-            // 계속 할당을 잘못 봣음 -> 동등 연산자였음
+            // 계속 할당으로 잘못 봣음 -> 동등 연산자였음
             if (i > 0 && c == target.charAt(i - 1) && c != 'e' && c != 'o') {
                 return false;
             }
